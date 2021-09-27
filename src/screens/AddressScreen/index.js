@@ -40,16 +40,16 @@ const AddressScreen = () =>{
         >
             <ScrollView style={styles.root}>
                 <View style={styles.row}>
-                    <Picker
+                    {/* <Picker
                         selectedValue={country}
                         onValueChange={(value)=>setCountry(value)}
                     >
                         {data.map((country)=>{
                             return(
-                                <Picker.item key={country.code} label={country.name} value={country.code}/>
+                                <Picker.item  label={country.name} value={country.code}/>
                             ) 
                         })}
-                    </Picker>
+                    </Picker> */}
                 </View>
                 
                 {/* Name */}

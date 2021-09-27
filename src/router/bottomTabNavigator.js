@@ -5,17 +5,17 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import HomeScreen from '../screens/HomeScreen' 
 import ShoppingCartStack from './ShoppingCartStack'
 import HomeStack from './HomeStack';
+import MenuScreen from '../screens/MenuScreen'
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabNav = () =>{
     return(
         <Tab.Navigator
-            tabBarOptions={{
+            screenOptions={{
                 inactiveTintColor: '#ffbd7d',
                 activeTintColor: '#e47911',
                 showLabel: false,
-                
             }}
         >
             <Tab.Screen
@@ -53,7 +53,7 @@ const BottomTabNav = () =>{
                  }}
             />
             <Tab.Screen 
-                component={HomeScreen} 
+                component={MenuScreen} 
                 name="More"
                 options={{
                     tabBarIcon: ({color})=>{

@@ -39,7 +39,7 @@ const ImageCarousel = ({images}) =>{
                 snapToInterval={windowWidth - 20}
                 snapToAlignment={'center'}
                 decelerationRate={'fast'}
-                // keyExtractor={({item, index})=>index}
+                keyExtractor={({item, index})=>index}
             />
             <View style={styles.dotContainer}>
                 {

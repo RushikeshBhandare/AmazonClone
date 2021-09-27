@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+
 
 import React from 'react';
 import {
@@ -13,11 +7,13 @@ import {
   useColorScheme,
 } from 'react-native';
 import { Colors} from 'react-native/Libraries/NewAppScreen';
-import HomeScreen from './src/screens/HomeScreen';
-import ProductScreen from './src/screens/ProductScreen';
-import ShoopingCart from './src/screens/ShoopingCart.js';
-import AddressScreen from './src/screens/AddressScreen';
 import Router from './src/router';
+
+// AWS Amplify
+import Amplify from 'aws-amplify'
+import {withAuthenticator} from 'aws-amplify-react-native'
+import config from './src/aws-exports'
+Amplify.configure(config)
 
 const App =  () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -36,4 +32,4 @@ const App =  () => {
 };
 
 
-export default App;
+export default withAuthenticator(App);
